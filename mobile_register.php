@@ -1,5 +1,5 @@
 <?php
-    $hostname = "localhost:3307";
+    $hostname = "localhost";
     $username = "root";
     $password = "";
     $dbname = "polyglot";
@@ -7,10 +7,10 @@
     $connect = mysqli_connect($hostname, $username, $password, $dbname) 
     OR DIE ("Connection Failed");
 
-    $username = $_GET["Username"];
-    $pass = $_GET["Password"];
+    $username = $_GET["username"];
+    $pass = $_GET["password"];
 
-    $sql = "SELECT * FROM login WHERE username = '$username' AND password = '$pass' ";
+    $sql = "SELECT * FROM login WHERE username='$username' AND password='$pass' ";
  
     $sendsql = mysqli_query($connect, $sql);
 
